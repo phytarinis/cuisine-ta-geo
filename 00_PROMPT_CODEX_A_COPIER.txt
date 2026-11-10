@@ -1,0 +1,33 @@
+Tu es développeur front-end et intégrateur de jeux pédagogiques accessibles.
+
+MISSION : CODE LA VERSION COMPLÈTE ET JOUABLE de « Cuisine ta Géo — Le Battle des Saveurs », jeu pour l'E2C Coutras. Ne fais PAS seulement un prototype d'accueil. Tu travailles dans un nouveau dossier autonome. NE TOUCHE PAS aux repositories « Ce Coutras qui n'existe pas » ni « Festoche ou Fiasco ».
+
+LIS D'ABORD et respecte INTEGRALEMENT les fichiers joints dans cet ordre :
+1. README.md
+2. 01_CAHIER_DES_CHARGES.md
+3. 02_DONNEES_JEU.js (banque de 32 défis/cartes et coordonnées exactes)
+4. 04_TESTS_ET_RECETTE.md
+5. 03_GUIDE_ANIMATION_E2C.md
+
+CRÉE : index.html, styles.css, app.js, data.js (à partir de 02_DONNEES_JEU.js), assets/france.svg et assets/monde.svg, README technique ; ajoute tes tests automatisés simples si possible. HTML/CSS/JavaScript natif uniquement, sans backend/npm/CDN, jouable hors ligne en ouvrant index.html et sur GitHub Pages. Pas de fetch() obligatoire des données locales.
+
+CODE LES 5 MANCHES INTÉGRALEMENT :
+1. Apéro local : 6 QCM duels simultanés, 2 réponses enregistrées sans feedback prématuré, +10 par équipe si juste.
+2. À quelle sauce ? : 6 spécialités alternées (A/B), 3 indices à 20/15/10 points, tentative unique, 1 vol par erreur pour +5, joker x2 utilisable une fois avant question.
+3. GPS en PLS : 6 livraisons alternées ; 4 repères A/B/C/D à localiser sur une CARTE EXACTE de France et choix de région, +10/+5 indépendants ; joker x2 sur la livraison entière.
+4. Passeport gourmand : 4 duels pays +10, continent +5, réponses masquées jusqu'à validation des deux équipes, localisation sur carte du monde après réponse.
+5. Coup de feu : finale de 5 bons de livraison par équipe, départements/régions à associer, 90 secondes chacun, +10 pour paire juste, pause fonctionnelle, pas de bonus vitesse.
+
+INDISPENSABLE : 2 équipes visibles, score fiable, animations légères, carte France + carte monde locales géographiquement cohérentes, saisie via le formateur avec un seul écran et deux ardoises, aucune inscription, sauvegarde/reprise localStorage, pause, reset confirmé, correction manuelle de score, classement final et débrief. Lis toutes les règles d'arbitrage et les cas limites dans le cahier et les tests.
+
+GRAPHISME : arcade culinaire joyeux et lisible, avec 2 food trucks rivaux, écrans distincts, pictos et micro-animations ; couleurs AFEPT bleu #1396d4 / rouge #e94b61, crème et bleu nuit. Pas d'effet visuel au détriment de l'accessibilité sur vidéoprojecteur.
+
+PLAN DE TRAVAIL :
+A. Vérifie les données JSON/JS et leur cohérence. Ne remplace aucune question par un placeholder.
+B. Mets en place structure, gestion d'état des manches et écrans, sauvegarde et calcul des scores.
+C. Intègre les 5 mini-jeux et le barème détaillé ; garde les réponses exactes non visibles jusqu'à la correction.
+D. Prépare et intègre les SVG France / monde à partir de données géographiques exactes et libres (Natural Earth par exemple), en local, avec repères cohérents fondés sur lat/lon.
+E. Teste tous les cas du document de recette, particulièrement les vol/jokers, double validation, reprise, timer, mauvaises réponses.
+F. Fournis tous les fichiers du jeu, le mode d'emploi, et résume ce qui a été testé. Ne dis pas « c'est terminé » tant qu'aucune des cinq manches n'est manquante.
+
+SI UN ELEMENT EST DELICAT : privilégie la version la plus SIMPLE qui respecte l'objectif et les critères de test. Ne supprime pas une manche. Ne pose pas de question de design non indispensable. Tu peux créer les cartes/illustrations en CSS/SVG. Le jeu doit être immédiatement utilisable par la formatrice en salle E2C.
