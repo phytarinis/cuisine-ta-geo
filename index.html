@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cuisine ta Géo — Le Battle des Saveurs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header id="scores"></header>
+    <main id="app" tabindex="-1"></main>
+    <footer id="controls"></footer>
+    <dialog id="admin">
+      <h2>Arbitrage</h2>
+      <div id="adjustments"></div>
+      <h3>Historique</h3>
+      <ol id="history"></ol>
+      <button id="closeAdmin">Fermer</button>
+    </dialog>
+    <dialog id="reset">
+      <h2>Effacer cette partie ?</h2>
+      <p>Les scores et la progression seront supprimés.</p>
+      <button id="cancelReset">Conserver la partie</button
+      ><button id="confirmReset">Oui, nouvelle partie</button>
+    </dialog>
+    <noscript>Activez JavaScript pour jouer.</noscript>
+  </body>
+</html>

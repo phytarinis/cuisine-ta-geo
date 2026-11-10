@@ -1,30 +1,57 @@
-# À LIRE EN PREMIER — Cuisine ta Géo
+# Cuisine ta Géo — Le Battle des Saveurs
 
-Ce dossier est le **kit de conception intégral à transmettre à Codex**. Le jeu n'est **pas encore codé**.
+Jeu de géographie pour deux brigades, conçu pour l’E2C Coutras : cinq manches et les 32 cartes du kit pédagogique. Un seul écran, piloté par la formatrice, et deux ardoises suffisent.
 
-## Les fichiers
+## Jouer sur Chromebook ou ordinateur
 
-1. **00_PROMPT_CODEX_A_COPIER.txt** : à coller tel quel dans Codex ; lui demander de lire les fichiers joints.
-2. **01_CAHIER_DES_CHARGES.md** : toutes les règles, mécaniques, écrans, barème, interface et logique technique.
-3. **02_DONNEES_JEU.js** : banque prête à l'emploi (32 défis/cartes), sans requête réseau.
-4. **02_DONNEES_JEU.json** : mêmes données pour contrôle/édition, référence canonique.
-5. **03_GUIDE_ANIMATION_E2C.md** : consignes du formateur, points pédagogiques et débrief.
-6. **04_TESTS_ET_RECETTE.md** : test de conformité avant la séance.
+1. Télécharger le dossier complet du dépôt (Code → Download ZIP), puis le décompresser.
+2. Ouvrir **index.html** dans Chrome. Garder `data.js`, `app.js`, `styles.css` et le dossier `assets` à côté.
+3. Cliquer sur **Lancer la bataille des saveurs**, nommer les équipes et commencer. Le bouton **Comment jouer ?** rappelle les règles.
+4. Pour projeter, utiliser le plein écran du navigateur. Les boutons sont utilisables au clavier avec Tab et Entrée ; les repères de carte ont aussi des boutons équivalents.
 
-## Mode d'emploi
+Aucune installation, connexion, inscription, bibliothèque distante ou requête de données n’est nécessaire pour jouer. Après téléchargement, le dossier fonctionne sans Internet. Sur GitHub Pages, la première ouverture demande Internet ; télécharger le dossier pour une séance entièrement hors ligne.
 
-- Décompresser le ZIP dans un **nouveau dossier/projet GitHub**, indépendant de « Ce Coutras qui n'existe pas » et « Festoche ou Fiasco ».
-- Ouvrir Codex dans ce dossier, copier le contenu du fichier `00_PROMPT_CODEX_A_COPIER.txt` et fournir les autres fichiers si nécessaire.
-- Laisser Codex créer **index.html, styles.css, app.js, assets/france.svg, assets/monde.svg** et éventuellement des ressources graphiques facultatives.
-- Tester en ouvrant `index.html` directement (pas de serveur), puis sur Chromebook + vidéoprojecteur.
+## Les cinq manches
 
-## Origine pédagogique
+- **Apéro local** : les deux équipes révèlent leur ardoise simultanément. Saisir les deux choix puis **Révéler**. +10 par réponse correcte.
+- **À quelle sauce ?** : une équipe joue, avec trois indices à 20/15/10 points. Une erreur ou un passe donne un seul vol à l’autre équipe (+5).
+- **GPS en PLS** : choisir un repère sur la vraie carte de France (+10), puis une région (+5), indépendamment. Les noms des villes apparaissent à la correction.
+- **Passeport gourmand** : duel pays (+10), puis continent (+5). Chaque étape attend les deux réponses ; la carte du monde apparaît à la correction.
+- **Coup de feu** : cinq bons par équipe, 90 secondes chacune. Département et région justes ensemble : +10, sinon 0. Pas de bonus vitesse. L’équipe ayant le moins de points commence (A en cas d’égalité). Les dix corrections apparaissent après les deux séries.
 
-Adapté de la séance existante « Cuisine ta géographie » : spécialités régionales, pays du monde, géolocalisation sur des cartes. La version numérique remplace les diapositives/exercices par cinq mini-jeux compétitifs ; elle ne remplace pas tout le travail de recherche et d'expression de la séance originelle.
+Chaque équipe dispose d’un seul joker **Sauce piquante ×2** pour toute la partie, à annoncer sur l’écran de préparation d’un défi des manches 2 ou 3. Il est consommé même en cas d’erreur et ne double jamais un vol. Le score de base maximal sans joker est **275 par équipe**.
 
-Supports initiaux consultés :
-- [Diaporama « Cuisine ta geo »](https://docs.google.com/presentation/d/1HgXwPrBf5irRMLEyPzhbIP9VVi4yOqP579iIV6hcPEk/edit)
-- [Exercice « Cuisine ta géographie »](https://docs.google.com/document/d/1Mio847hMqSOIBbVEPy14Qdk7puU8KKvv_-PuMbbFj_M/edit)
-- [Corrigé](https://docs.google.com/document/d/1ZjhPXh2JWmKxi-UeM_OEXPnsQV5GBwZ5IqvEnSc89ko/edit)
+## Pause, sauvegarde et arbitrage
 
-Références pour les cartes : [Natural Earth (données cartographiques librement réutilisables)](https://www.naturalearthdata.com/downloads/), [INSEE — Coutras](https://www.insee.fr/fr/metadonnees/geographie/commune/33138-coutras). Pour la France, utiliser une carte exacte de la France métropolitaine, y compris la Corse, et ne **pas inventer** les contours.
+- **Pause** masque le défi et arrête le chrono. Après rechargement, cliquer sur **Reprendre la partie**, puis **Reprendre** : la sauvegarde revient en pause, au bon défi et avec le temps restant.
+- Sauvegarde automatique locale au navigateur après les choix, validations, transitions et pendant le chrono. Garder le même navigateur, profil et emplacement de fichier. Le stockage peut être désactivé ou éphémère en navigation privée ; un message avertit s’il est indisponible. Ce n’est pas une sauvegarde partagée entre ordinateurs.
+- Avant validation, un choix peut être modifié. Après validation, aucun retour arrière ne recalcule les points.
+- **Corriger le score / historique** permet ±5 ou ±10, sans score négatif. L’historique affiche les corrections manuelles.
+- **Nouvelle partie / Rejouer** demande une confirmation. Annuler conserve la partie.
+- Une égalité finale autorise un seul duel bonus facultatif : la préfecture de la Gironde. +10 par bonne réponse ; si les deux répondent pareil, l’égalité reste entière.
+- **Bilan / Débrief** ouvre les questions pédagogiques sans modifier les scores. Le score ne valide pas automatiquement les compétences UP2C.
+
+## Publier sur GitHub Pages
+
+Dans les paramètres de **ce dépôt uniquement**, ouvrir Pages, choisir le déploiement depuis une branche, `main` et `/ (root)`, puis enregistrer. Les fichiers du jeu doivent d’abord être commités et envoyés sur cette branche. Aucune compilation n’est nécessaire. Ne pas publier les autres projets.
+
+## Structure et évolution
+
+- `index.html` : page et dialogues ; `styles.css` : interface et animations ; `app.js` : état, navigation, arbitrage, scores et chrono.
+- `data.js` : données exécutables chargées avant l’application, sans `fetch`. Copie exacte de `02_DONNEES_JEU.js`.
+- `02_DONNEES_JEU.json` : référence canonique éditable. Pour modifier une question, maintenir les trois fichiers de données synchronisés et les index de réponse dans les options. Conserver les nombres de cartes, l’ordre des équipes et les identifiants uniques. Changer la version de sauvegarde `VERSION`/`KEY` dans `app.js` si une modification rend les anciennes parties incompatibles.
+- `assets/france.svg`, `assets/monde.svg` : cartes locales Natural Earth (domaine public). Provenance et formules dans `assets/README.md`.
+- Documents `00_` à `04_` : conception, données, animation et critères de recette d’origine, conservés.
+
+## Tests de développement (facultatifs pour jouer)
+
+Le jeu lui-même utilise uniquement HTML/CSS/JavaScript natifs. Les tests automatisés utilisent Node.js et Playwright **sur la machine de développement seulement**, avec un navigateur Chromium/Chrome disponible :
+
+```sh
+node tests/game.cjs
+node tests/web.cjs
+```
+
+Si nécessaire, installer Playwright dans un répertoire de développement extérieur au jeu et l’exposer avec `NODE_PATH`. Le navigateur peut être sélectionné avec `CHROME_BIN=/chemin/vers/chrome` ; sinon les tests cherchent Chromium système. Les tests ouvrent directement `index.html`, coupent le réseau et parcourent les 32 cartes, puis vérifient erreurs, scores, joker/vol, pause/reprise, arbitrage et remise à zéro.
+
+Consulter `TEST_RESULTS.md` pour les résultats et les limites de validation, puis effectuer la recette matérielle sur le Chromebook et le vidéoprojecteur utilisés en séance.
